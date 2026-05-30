@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drainage Risk Monitoring</title>
+
+    <meta http-equiv="refresh" content="5">
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            padding:30px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            max-width:600px;
+            margin:auto;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        p{
+            font-size:18px;
+        }
+
+        .risk{
+            font-size:28px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <h1>Drainage Risk Monitoring</h1>
+
+    <p>Oxygen: {{ data.oxygen }} %</p>
+
+    <p>H₂S: {{ data.h2s }} ppm</p>
+
+    <p>Methane: {{ data.methane }} ppm</p>
+
+    <p>Temperature: {{ data.temperature }} °C</p>
+
+    <p>Humidity: {{ data.humidity }} %</p>
+
+    <p>Water Level: {{ data.water_level }} cm</p>
+
+    <hr>
+
+    <p class="risk">
+        Risk Level: {{ prediction }}
+    </p>
+
+</div>
+
+</body>
+</html>
